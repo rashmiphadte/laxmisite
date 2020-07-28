@@ -1,0 +1,29 @@
+body {
+  background: #FFF;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* navbar */
+.navbar {
+  /* background-color: #FFF; */
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  color: #1e609b;
+  transform: translateZ(0);
+    transition:all 0.5s;
+}
+
+
+.navbar li a {
+  color: #1e609b;
+  margin-top: 10px;
+}
+
+.intro{
+  background-image: url("../img/headerBg.png");
+}
+
+
