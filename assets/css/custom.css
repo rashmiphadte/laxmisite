@@ -188,3 +188,12 @@ body {
     width: 100%;
     background-color: #FFF;
 }
+
+.call-info {
+    position: absolute;
+    right: 9%;
+    top: 30%;
+    text-transform: uppercase;
+    font-size: 13pt;
+    color: #1e609b;
+}
