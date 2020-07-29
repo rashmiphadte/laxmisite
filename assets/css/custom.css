@@ -138,10 +138,53 @@ body {
     border-radius: 0px;
     padding: 10px 35px 10px 35px;
     margin-right: 19px;
+    margin-bottom: 20px;
 }
 
 .contact-us p {
     color: #000201;
     font-size: 1.3em;
     font-weight: 500;
+}
+
+.footer {
+    background-color: #0b4d85;
+}
+
+.footer ul {
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.footer ul li a {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer span {
+    color: #FFF;
+}
+
+.footer p {
+    margin-left: 3rem;
+    color: #FFF;
+    font-size: 1em;
+}
+
+.footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.sticky.is-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #FFF;
 }
