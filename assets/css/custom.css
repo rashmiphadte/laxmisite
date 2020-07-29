@@ -115,3 +115,33 @@ body {
     height: 55pt;
     background-image: url("../img/next.png");
 }
+
+.clients h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.contact-us {
+    background-color: #61ffe7;
+}
+
+.contact-us h2 {
+    color: #04647d;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.contact-us button {
+    border: 1px solid #0e5d9f;
+    background: #0e5d9f;
+    border-radius: 0px;
+    padding: 10px 35px 10px 35px;
+    margin-right: 19px;
+}
+
+.contact-us p {
+    color: #000201;
+    font-size: 1.3em;
+    font-weight: 500;
+}
