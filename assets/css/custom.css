@@ -85,8 +85,13 @@ body {
     width: 100%;
 }
 
+.products {
+    background: url("../img/aboutBg.png") no-repeat #FFF;
+    min-height: 500px;
+}
+
 .products h1 {
-    color: #fff;
+    color: #393683;
     font-size: 2.5em;
     font-weight: 700;
     letter-spacing: 10px;
@@ -100,7 +105,7 @@ body {
 .products p {
     font-size: 1em;
     font-weight: 700;
-    color: #4d4d4d;
+    color: #393683;
     text-align: center;
 }
 
@@ -123,7 +128,7 @@ body {
 }
 
 .contact-us {
-    background-color: #61ffe7;
+    background-color: #0e94b9;
 }
 
 .contact-us h2 {
@@ -133,18 +138,28 @@ body {
 }
 
 .contact-us button {
-    border: 1px solid #0e5d9f;
-    background: #0e5d9f;
+    border: 1px solid #cccccc;
+    background: #cccccc;
     border-radius: 0px;
     padding: 10px 35px 10px 35px;
     margin-right: 19px;
     margin-bottom: 20px;
+    color: #04647d;
 }
 
 .contact-us p {
-    color: #000201;
+    color: #FFF;
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.contact-us span {
+    font-weight: 200;
+    font-size: 0.9em;
+}
+
+.form-control {
+    border-radius: 0px;
 }
 
 .footer {
@@ -196,4 +211,23 @@ body {
     text-transform: uppercase;
     font-size: 13pt;
     color: #1e609b;
+}
+
+.aboutUs a {
+    float: right;
+    font-size: 1.5em;
+    color: #04647d;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.aboutUs .services a:hover {
+    text-decoration: none;
+}
+
+.services a {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-decoration: none;
 }
