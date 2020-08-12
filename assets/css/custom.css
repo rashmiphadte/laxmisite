@@ -112,13 +112,13 @@ body {
 .carousel-control-prev-icon {
     width: 25pt;
     height: 55pt;
-    background-image: url("../img/prev.png");
+    background-image: url("../img/home-prev.png");
 }
 
 .carousel-control-next-icon {
     width: 25pt;
     height: 55pt;
-    background-image: url("../img/next.png");
+    background-image: url("../img/home-next.png");
 }
 
 .clients h1 {
