@@ -109,6 +109,10 @@ body {
     text-align: center;
 }
 
+.products a {
+    text-decoration: none;
+}
+
 .carousel-control-prev-icon {
     width: 25pt;
     height: 55pt;
