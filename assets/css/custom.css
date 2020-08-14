@@ -231,3 +231,19 @@ body {
     font-weight: 600;
     text-decoration: none;
 }
+
+.about-header {
+    background-color: #e5e7e7;
+    color: #383195;
+    padding: .9em;
+    font-size: 5em;
+}
+
+.about-header h1 {
+    font-size: 1em;
+}
+
+.about-header-para {
+    color: #42737f;
+    font-size: 1.3em;
+}
