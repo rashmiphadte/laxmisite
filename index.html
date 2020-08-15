@@ -17,7 +17,7 @@
 
 <body>
     <header id="home">
-        <nav id="navbar" class="pt-3 navbar navbar-expand-md" data-toggle="sticky-onscroll">
+        <nav id="navbar" class="pt-3 navbar navbar-expand-md sticky-top" data-toggle="sticky-onscroll">
             <div class="container">
                 <!-- Brand -->
                 <a class="navbar-brand my-1 mx-5 logo" href="index.html"><img src="assets/img/logo.png" alt="logo" class="img-fluid" width="">
@@ -310,7 +310,7 @@
     <script>
         $(document).ready(function() {
             // Custom 
-            var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
+            /*var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
                 var stickyHeight = sticky.outerHeight();
                 var stickyTop = stickyWrapper.offset().top;
                 if (scrollElement.scrollTop() >= stickyTop) {
@@ -336,7 +336,25 @@
 
                 // On page load
                 stickyToggle(sticky, stickyWrapper, $(window));
-            });
+            });*/
+
+            // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
 
             // Select all links with hashes
             $('a[href*="#"]')
@@ -358,7 +376,7 @@
                     // Only prevent default if animation is actually gonna happen
                     event.preventDefault();
                     $('html, body').animate({
-                    scrollTop: target.offset().top
+                    scrollTop: target.offset().top - 150
                     }, 700, function() {
                     // Callback after animation
                     // Must change focus!
