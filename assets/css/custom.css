@@ -266,3 +266,13 @@ body {
     text-transform: uppercase;
     color: #186dae;
 }
+
+.services-section {
+    color: #0663a6;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.services-section span {
+    font-weight: 800;
+}
