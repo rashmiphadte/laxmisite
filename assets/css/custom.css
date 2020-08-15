@@ -74,6 +74,19 @@ body {
 
 .intro h2 {
     font-size: 1.5em;
+    text-align: center;
+}
+
+.ourClientLink {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0;
+    text-transform: uppercase;
+    display: block;
+}
+.ourClientLink:hover  {
+    color: #FFF;
 }
 
 .intro hr {
@@ -84,7 +97,6 @@ body {
     background: url("../img/aboutBg.png") no-repeat #FFF;
     min-height: 500px;
     color: #0b4d85;
-    min-height: calc(100vh - 50px);
 }
 
 .aboutUs p {
@@ -92,10 +104,28 @@ body {
     font-weight: 700;
 }
 
+.servicesList {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  .servicesList li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    height: 1em;
+    background: red;
+    border-radius: 50px;
+    position: relative;
+    top: 7px;
+    left: -15px;
+  }
+
 .services {
     background: url("../img/servicesBg.png") no-repeat #FFF;
     color: #FFF;
-    min-height: calc(100vh - 50px);
 }
 
 .services ul li {
@@ -108,6 +138,7 @@ body {
     font-size: 3em;
     font-weight: 700;
     letter-spacing: 10px;
+    margin-left: 10px;
 }
 
 .services hr {
@@ -120,13 +151,12 @@ body {
     width: 100%;
 }
 
-.services {
+.aboutUs, .services, .clients, .products, .contact-us, .product-section {
     min-height: calc(100vh - 50px);
 }
 
 .products {
     background: url("../img/aboutBg.png") no-repeat #FFF;
-    min-height: calc(100vh - 50px);
 }
 
 .products h1 {
@@ -151,6 +181,7 @@ body {
     font-weight: 700;
     color: #393683;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .products a {
@@ -177,7 +208,6 @@ body {
 
 .contact-us {
     background-color: #0e94b9;
-    min-height: calc(100vh - 50px);
 }
 
 .contact-us h2 {
@@ -281,7 +311,7 @@ body {
 
 .services a {
     color: #fff;
-    font-size: 1.3em;
+    font-size: .9em;
     font-weight: 600;
     text-decoration: none;
 }
