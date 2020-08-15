@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <nav id="navbar" class="pt-3 navbar navbar-expand-md" data-toggle="sticky-onscroll">
+        <nav id="navbar" class="pt-3 navbar navbar-expand-md">
             <div class="container">
                 <!-- Brand -->
                 <a class="navbar-brand my-1 mx-5 logo" href="index.html"><img src="assets/img/logo.png" alt="logo" class="img-fluid" width="">
@@ -140,38 +140,9 @@
     <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Custom 
-            var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
-                var stickyHeight = sticky.outerHeight();
-                var stickyTop = stickyWrapper.offset().top;
-                if (scrollElement.scrollTop() >= stickyTop) {
-                    stickyWrapper.height(stickyHeight);
-                    sticky.addClass("is-sticky");
-                } else {
-                    sticky.removeClass("is-sticky");
-                    stickyWrapper.height('auto');
-                }
-            };
-
-            // Find all data-toggle="sticky-onscroll" elements
-            $('[data-toggle="sticky-onscroll"]').each(function() {
-                var sticky = $(this);
-                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
-                sticky.before(stickyWrapper);
-                sticky.addClass('sticky');
-
-                // Scroll & resize events
-                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
-                    stickyToggle(sticky, stickyWrapper, $(this));
-                });
-
-                // On page load
-                stickyToggle(sticky, stickyWrapper, $(window));
-            });
-        });
-    </script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.1.0.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
