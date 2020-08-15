@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <nav id="navbar" class="pt-3 navbar navbar-expand-md" data-toggle="sticky-onscroll">
+        <nav id="navbar" class="pt-3 navbar navbar-expand-md">
             <div class="container">
                 <!-- Brand -->
                 <a class="navbar-brand my-1 mx-5 logo" href="index.html"><img src="assets/img/logo.png" alt="logo" class="img-fluid" width="">
@@ -37,7 +37,7 @@
                             <a class="nav-link" href="index.html">Home </a>
                         </li>
                         <li class="nav-item ml-5">
-                            <a class="nav-link" href="#aboutUs">About Us </a>
+                            <a class="nav-link" href="aboutUs.html">About Us </a>
                         </li>
                         <li class="nav-item dropdown ml-5">
                             <a class="nav-link" href="services.html">Services</a>
@@ -47,7 +47,7 @@
                             <a class="nav-link" href="products.html">Products</a>
                         </li>
                         <li class="last-nav  nav-item ml-5">
-                            <a class="nav-link" href="#contactUs">Contact Us</a>
+                            <a class="nav-link" href="index.html#contactUs">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -170,7 +170,7 @@
                             <a href="index.html">Home</a><span>|</span>
                         </li>
                         <li>
-                            <a href="#aboutUs">About us</a><span>|</span>
+                            <a href="aboutUs.html">About us</a><span>|</span>
                         </li>
                         <li>
                             <a href="services.html">Services</a><span>|</span>
@@ -179,7 +179,7 @@
                             <a href="products.html">Products</a><span>|</span>
                         </li>
                         <li>
-                            <a href="#contactUs">Contact us</a>
+                            <a href="index.html#contactUs">Contact us</a>
                         </li>
                     </ul>
                 </div>
@@ -202,38 +202,8 @@
     <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Custom 
-            var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
-                var stickyHeight = sticky.outerHeight();
-                var stickyTop = stickyWrapper.offset().top;
-                if (scrollElement.scrollTop() >= stickyTop) {
-                    stickyWrapper.height(stickyHeight);
-                    sticky.addClass("is-sticky");
-                } else {
-                    sticky.removeClass("is-sticky");
-                    stickyWrapper.height('auto');
-                }
-            };
-
-            // Find all data-toggle="sticky-onscroll" elements
-            $('[data-toggle="sticky-onscroll"]').each(function() {
-                var sticky = $(this);
-                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
-                sticky.before(stickyWrapper);
-                sticky.addClass('sticky');
-
-                // Scroll & resize events
-                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
-                    stickyToggle(sticky, stickyWrapper, $(this));
-                });
-
-                // On page load
-                stickyToggle(sticky, stickyWrapper, $(window));
-            });
-        });
-    </script>
+    <script src="assets/js/jquery-3.1.0.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
