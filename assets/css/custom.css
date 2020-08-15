@@ -256,3 +256,13 @@ body {
     background-image: url("../img/product-slider1.png");
     min-height: 450px;
 }
+
+.product-section h1 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.product-section p {
+    text-transform: uppercase;
+    color: #186dae;
+}
