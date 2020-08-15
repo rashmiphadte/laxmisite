@@ -1,6 +1,24 @@
+@font-face {
+    font-family: 'humanst';
+    src: url(tt0290m_.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(PoppinsMedium.ttf);
+}
+
+@font-face {
+    font-family: 'humanstBt';
+    src: url(tt0292m_.ttf);
+}
+
+  
+
 body {
-    background: #FFF;
-    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    font-family: 'humanst', sans-serif;
+    color: #0693b8;
 }
 
 
@@ -13,31 +31,46 @@ body {
     left: 0;
     z-index: 9999;
     width: 100%;
-    color: #1e609b;
+    color: #0693b8;
     transform: translateZ(0);
     transition: all 0.5s;
 }
 
 .navbar li a {
-    color: #1e609b;
+    color: #0693b8;
     margin-top: 10px;
+    font-weight: 900;
 }
 
 .intro {
-    background: url("../img/headerBg.png") no-repeat #FFF;
-    min-height: 500px;
+    background: url(../img/headerBg.png) no-repeat #175993;
     color: #fff;
+    min-height: calc(100vh - 140px);
+    display: table;
+    background-position-y: center;
+}
+.intro .row {
+    display: table-cell;
+    vertical-align: middle;
+    align-items: center;
 }
 
 .intro h3 {
     text-align: center;
     font-size: 3em;
+    margin-top: .2em;
 }
 
 .intro h1 {
     font-size: 3.2em;
     font-weight: 900;
+    font-family: 'humanstBt';
+    text-align: center;
+    line-height: 50pt;
 }
+.intro h1 b {
+    font-size: 1.5em;
+ }
 
 .intro h2 {
     font-size: 1.5em;
@@ -51,6 +84,7 @@ body {
     background: url("../img/aboutBg.png") no-repeat #FFF;
     min-height: 500px;
     color: #0b4d85;
+    min-height: calc(100vh - 140px);
 }
 
 .aboutUs p {
@@ -61,6 +95,7 @@ body {
 .services {
     background: url("../img/servicesBg.png") no-repeat #FFF;
     color: #FFF;
+    min-height: calc(100vh - 140px);
 }
 
 .services ul li {
@@ -85,9 +120,13 @@ body {
     width: 100%;
 }
 
+.services {
+    min-height: calc(100vh - 140px);
+}
+
 .products {
     background: url("../img/aboutBg.png") no-repeat #FFF;
-    min-height: 500px;
+    min-height: calc(100vh - 140px);
 }
 
 .products h1 {
@@ -100,6 +139,11 @@ body {
 
 .img-height {
     height: 100%;
+}
+
+.img-height img, .products-household img {
+    margin: 0 auto;
+    display: block;
 }
 
 .products p {
@@ -133,6 +177,7 @@ body {
 
 .contact-us {
     background-color: #0e94b9;
+    min-height: calc(100vh - 140px);
 }
 
 .contact-us h2 {
@@ -207,16 +252,21 @@ body {
     width: 100%;
     background-color: #FFF;
 }
+.navbar .container { position:relative}
 
 .call-info {
     position: absolute;
-    right: 9%;
-    top: 30%;
+    right: 7%;
+    top: 10%;
     text-transform: uppercase;
-    font-size: 13pt;
-    color: #1e609b;
+    font-size: 12pt;
+    color: #0693b8;
 }
 
+.call-info span a, .call-info a span {
+    font-family: 'Poppins';
+    color: #0693b8
+}
 .aboutUs a {
     float: right;
     font-size: 1.5em;
@@ -253,7 +303,7 @@ body {
 }
 
 .products-header {
-    background-image: url("../img/product-slider1.png");
+    /*background-image: url("../img/product-slider1.png");*/
     min-height: 450px;
 }
 
@@ -265,6 +315,7 @@ body {
 .product-section p {
     text-transform: uppercase;
     color: #186dae;
+    text-align: center;
 }
 
 .services-section {
