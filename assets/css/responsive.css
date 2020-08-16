@@ -131,6 +131,20 @@
         font-size: 1.1em;
         margin-top: 5px !important;
     }
+    .carousel-control-next-icon {
+        width: 15pt;
+        height: 20pt;
+    }
+    .carousel-control-prev-icon {
+        width: 15pt;
+        height: 20pt;
+    }
+    .services-section {
+        font-size: 1.3em;
+    }
+    .services-section span {
+        font-weight: 600;
+    }
     @media screen and (max-width: 320px) {
         .call-info {
             position: absolute;
