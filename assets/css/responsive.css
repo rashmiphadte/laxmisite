@@ -122,6 +122,15 @@
     .footer ul {
         display: inline-block;
     }
+    .about-header {
+        margin-top: 0rem!important;
+        margin-bottom: 0px !important;
+        padding: 0.6em;
+    }
+    .about-header-para {
+        font-size: 1.1em;
+        margin-top: 5px !important;
+    }
     @media screen and (max-width: 320px) {
         .call-info {
             position: absolute;
