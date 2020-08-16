@@ -1,31 +1,135 @@
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) {}
 
-    
-}
-@media screen and (max-width: 1198px){
-  
-}
-@media screen and (max-width: 1132px){
-   
+@media screen and (max-width: 1198px) {}
+
+@media screen and (max-width: 1132px) {
     @media screen and (max-width: 1024px) {
-        
-        
-        
-        @media screen and (max-width:991px){
-           
-        }
-        
+        @media screen and (max-width: 991px) {}
     }
 }
-@media screen and (max-width: 978px){
-    
 
-}
-@media screen and (max-width: 768px) {
-}
+@media screen and (max-width: 978px) {}
+
+@media screen and (max-width: 768px) {}
+
 @media screen and (max-width: 640px) {
-   
-        @media screen and (max-width: 320px) {
-            
+    .call-info {
+        position: absolute;
+        right: 7%;
+        top: 70%;
+        text-transform: uppercase;
+        font-size: 12pt;
+        color: #0693b8;
+    }
+    .navbar-toggler {
+        position: relative;
+        left: 17em;
+    }
+    .intro h1 {
+        font-size: 1.3em;
+    }
+    .intro h1 b {
+        font-size: 1.1em;
+    }
+    .intro h2 {
+        font-size: 1em;
+        text-align: center;
+    }
+    .ourClientLink {
+        color: #FFF;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .aboutUs h1 {
+        margin-top: 1px !important;
+    }
+    .aboutUs p {
+        font-size: 1.1em;
+        margin-top: 2px !important;
+    }
+    .services h1 {
+        font-size: 2em;
+    }
+    .services h4 {
+        font-size: 1em;
+        margin-left: 2em !important;
+    }
+    .services hr {
+        margin-left: 2.5em;
+    }
+    .services ul li {
+        padding: 5px;
+        font-size: 1.2em;
+        font-weight: 500;
+        margin-left: 2em;
+    }
+    .services li a {
+        padding: 0px;
+        position: relative;
+        top: 25px;
+    }
+    .servicesList {
+        margin-bottom: 2rem!important;
+    }
+    .carousel {
+        margin-top: 0px !important;
+        padding: 0px !important;
+    }
+    .products h1 {
+        margin-bottom: 0px !important;
+    }
+    .products a {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .clients h1 {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    .contact-us h2 {
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-bottom: 10px !important;
+    }
+    .contact-us button {
+        float: left !important;
+    }
+    .contact-us textarea {
+        width: 65%;
+    }
+    .contact-us span {
+        font-size: 1em;
+    }
+    .contact-us p {
+        font-size: 1.3em;
+        font-weight: 500;
+        margin-bottom: 15px !important;
+    }
+    .footer ul li a {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 1em;
+    }
+    .footer img {
+        margin-right: 10px !important;
+    }
+    .social-links {
+        margin-left: 3em;
+    }
+    .mg-logo {
+        margin-left: 3em;
+    }
+    .footer ul {
+        display: inline-block;
+    }
+    @media screen and (max-width: 320px) {
+        .call-info {
+            position: absolute;
+            right: 7%;
+            top: 23%;
+            text-transform: uppercase;
+            font-size: 12pt;
+            color: #0693b8;
         }
     }
+}
