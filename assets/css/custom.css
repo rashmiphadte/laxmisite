@@ -269,9 +269,11 @@ body {
 }
 
 .footer ul {
-    display: inline-flex;
     list-style-type: none;
+    padding:0;
 }
+
+.footer ul li { display: inline-block; }
 
 .footer ul li a {
     margin-left: 10px;
@@ -283,15 +285,17 @@ body {
 
 .social-links {
     margin-top: 2em;
+    text-align: right;
 }
 .footer span {
     color: #FFF;
 }
 
 .footer p {
-    margin-left: 3rem;
+    padding-left: 10px;
     color: #FFF;
     font-size: 1em;
+    text-align: left;
 }
 
 .footer a {
@@ -299,6 +303,11 @@ body {
     text-decoration: none;
 }
 
+.mg-logo {
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 22px;
+}
 .mg-logo span, .mg-logo a {
     color: #6699FF;
 }
@@ -317,6 +326,14 @@ body {
     position: relative
 }
 
+.certified {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: fit-content;
+    top: 7%;
+}
 .call-info {
     position: absolute;
     right: 7%;
@@ -331,6 +348,11 @@ body {
     font-family: 'Poppins';
     color: #0693b8
 }
+
+.call-info span a:hover, .call-info div a:hover, .ourClientLink:hover, .aboutUs p a:hover { text-decoration:none; }
+
+.ourClientLink:hover, .services a:hover { color:#908989; }
+.aboutUs p a:hover { color:#11b5e0; }
 
 .aboutUs p a {
     font-size: .8em;
@@ -409,7 +431,7 @@ body {
 }
 
 .sticky .logo,
-.sticky .call-info {
+.sticky .call-info, .sticky .certified {
     display: none;
 }
 
@@ -430,3 +452,6 @@ body {
     bottom: 10%;
     right: -15%;
 }
+
+.navbar-dark .navbar-toggler { background: #0894b9; }
+.navbar-dark .navbar-nav .nav-link { color:#0693B7 !important; }

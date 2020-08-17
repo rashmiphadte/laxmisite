@@ -18,7 +18,7 @@
 
 <body>
     <header id="home">
-        <nav id="navbar" class="pt-3 navbar navbar-expand-md sticky-top" data-toggle="sticky-onscroll">
+        <nav id="navbar" class="pt-3 navbar-dark navbar navbar-expand-md sticky-top" data-toggle="sticky-onscroll">
             <div class="container">
                 <!-- Brand -->
                 <a class="navbar-brand my-1 mx-5 logo" href="index.html"><img src="assets/img/logo.png" alt="logo" class="img-fluid" width="">
@@ -30,6 +30,16 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="certified">
+                <span>An ISO 9001:2015 Certified Company</span>
+            </div>
+            <!-- call now option -->
+            <div class="float-right  text-right call-info">
+                <div class="d-block">
+                    <span><a href="tel:+91 9545354068" class=""><img src="assets/img/phone-icon.png" alt="call"
+                            class="img-fluid mr-2" width=""> Call Now </span><span>+91 9545354068</a></span>
+                </div>
+            </div>
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse mt-5" id="collapsibleNavbar">
 
@@ -51,13 +61,6 @@
                             <a class="nav-link" href="#contactUs">Contact Us</a>
                         </li>
                     </ul>
-                </div>
-                <!-- call now option -->
-                <div class="float-right  text-right call-info">
-                    <div class="d-block">
-                        <span><a href="tel:+91 9545354068" class=""><img src="assets/img/phone-icon.png" alt="call"
-                                class="img-fluid mr-2" width=""> Call Now </span><span>+91 9545354068</a></span>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -91,7 +94,7 @@
                 <p class="mt-3 ml-5">
                     We also provide turnkey solutions for HVAC&R projects in the field of Hotels, Pharma, Automobile, Retails and Marine vessels.
                 </p>
-                <p class="mt-3 ml-5">We're an Astraia 9001:2015 company</p>
+                <p class="mt-3 ml-5">We're an Astraia ISO 9001:2015 company</p>
                 <p class="ml-5"><a href="aboutus.html">Read more ..</a></p>
             </div>
         </div>
@@ -479,11 +482,10 @@
                  
                 <p class="mb-1"><span>Registered Office:</span><br> God’s Grace Residency,<br> H. No. 59/G1, Shop No.: S3, Bamborda, Verna,<br> Salcette - Goa 403 722
                 </p>
-                <p class="mb-1">
-                    <span>Phone (Landline):</span> 0832-2782552
-                </p>
-                <p class="mb-1"><span>Mobile:</span>+91 98223 82898</p>
-                <p class="mb-1"><span>Email:</span>info@laxmieng.in</p>
+                <p class="mb-1"><span>Mobile:</span>  +91 9545354068  <span>(office):</span>  0832-2782552</p>
+                <p class="mb-1"></p>
+                
+                <p class="mb-1"><span>Email:</span>  info@laxmieng.in</p>
                 <p class="mb-1">
                     <span>Branch Office:</span> <br> Village Ratnali, PO Radhaballavpur.<br> Tamluk. Purbamidnapur, West Bengal - 721 636
                 </p>
@@ -494,7 +496,8 @@
     <div class="container footer">
         <footer>
             <div class="row">
-                <div class="mt-5 col-md-8 ">
+                <div class="col-md-1"></div>
+                <div class="mt-5 col-md-6 ">
                     <ul>
                         <li>
                             <a href="index.html">Home</a><span>|</span>
@@ -512,19 +515,19 @@
                             <a href="#contactUs">Contact us</a>
                         </li>
                     </ul>
+
+                    <div class="">
+                        <p>© 2020 Laxmi Engineering Services. All Rights Reserved.</p>
+                    </div>
                 </div>
                 <div class="col-md-4 social-links">
                     <a href="#"><img src="./assets/img/fb-icon.png" alt="social link" class="img-fluid mr-3"></a>
                     <a href="#"><img src="./assets/img/insta-icon.png" alt="instagram" class="img-fluid mr-3"></a>
                     <a href="#"><img src="./assets/img/linkdin-icon.png" alt="linkedin" class="img-fluid mr-3"></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 mb-3">
-                    <p>© 2020 Laxmi Engineering Services. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-4 mg-logo">
-                    <span>Designed by</span> <a href="https://www.mgraphix.in/" target="_blank">mgraphix.in</a>
+
+                    <div class="mg-logo">
+                        <span>Designed by</span> <a href="https://www.mgraphix.in/" target="_blank">mgraphix.in</a>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -579,7 +582,6 @@
                         // Figure out element to scroll to
                         var target = $(this.hash);
                         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        console.log(target);
                         // Does a scroll target exist?
                         if (target.length) {
                             // Only prevent default if animation is actually gonna happen
@@ -591,6 +593,7 @@
                                 // Must change focus!
                                 var $target = $(target);
                                 $target.focus();
+                                $(".navbar-toggler").click()
                                 if ($target.is(":focus")) { // Checking if the target was focused
                                     return false;
                                 } else {
