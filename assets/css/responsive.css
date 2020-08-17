@@ -14,16 +14,19 @@
 
 @media screen and (max-width: 640px) {
     .call-info {
-        position: absolute;
-        right: 7%;
-        top: 70%;
+        position: relative;
+        left: 20%;
         text-transform: uppercase;
         font-size: 12pt;
         color: #0693b8;
     }
+    .navbar-collapse {margin-top: 0 !important;
+    }
+    .certified { 
+        position: relative;
+        top: auto; bottom: 0px; left: auto;}
     .navbar-toggler {
         position: relative;
-        left: 17em;
     }
     .intro h1 {
         font-size: 1.3em;
@@ -115,6 +118,7 @@
     }
     .social-links {
         margin-left: 3em;
+        margin-top: 0;
     }
     .mg-logo {
         margin-left: 3em;
