@@ -13,20 +13,26 @@
 @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 640px) {
+    .logo {
+        margin-left: 0em !important;
+        margin-top: 1.5em !important;
+        margin-right: 3.5em !important;
+    }
     .call-info {
-        position: relative;
-        left: 20%;
+        position: absolute;
+        right: -12px;
         text-transform: uppercase;
         font-size: 12pt;
         color: #0693b8;
+        top: -12px;
     }
     .navbar-collapse {margin-top: 0 !important;
     }
-    .certified { 
-        position: relative;
-        top: auto; bottom: 0px; left: auto;}
+    .certified { top: 10px;}
     .navbar-toggler {
-        position: relative;
+        position: absolute;
+        right: 0;
+        top: 80px;
     }
     .intro h1 {
         font-size: 1.3em;

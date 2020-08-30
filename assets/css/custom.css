@@ -45,8 +45,12 @@ body {
     font-weight: 900;
 }
 
+.navbar .active a {
+    color:#b3b4b5 !important;
+}
+
 .intro {
-    background: url(../img/headerBg.png) no-repeat #175993;
+    background: #175993;
     color: #fff;
     min-height: calc(100vh - 140px);
     display: table;
@@ -454,4 +458,5 @@ body {
 }
 
 .navbar-dark .navbar-toggler { background: #0894b9; }
-.navbar-dark .navbar-nav .nav-link { color:#0693B7 !important; }
+.navbar-dark .navbar-nav .nav-link { color:#0693B7; }
+.navbar-dark .navbar-nav .nav-link:hover { color:#0693B7; }
