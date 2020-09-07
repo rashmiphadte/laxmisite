@@ -1,3 +1,50 @@
+<?php
+$msg='';
+
+if (isset($_REQUEST['action'])) {
+    $ubname = $_REQUEST['name'];
+    $ubname= str_replace("'","''",$ubname);
+
+    $uemail = $_REQUEST['email'];
+    $uemail =	str_replace("'","''",$uemail );
+
+    $subjct = $_REQUEST['company'];
+    $subjct	= str_replace("'","''",$subjct);
+
+    $uquery = $_REQUEST['message'];
+    $uquery=	str_replace("'","''",$uquery);
+
+    $body = "Dear,<br><br><b> <u>Contact details</u>:</b>";
+    $body .="<br><b>Name of Person :</b> $ubname"; 
+    $body .="<br><b>Email :</b> $uemail"; 
+    $body .="<br><b>Inquiry Text :</b> $uquery"; 
+
+    echo "body=".$body;
+
+    $to =  "joyco107@gmail.com";
+ 
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $headers .= "From: $uemail";
+    $subject = "Enquiry from " . $uemail;
+
+    mail($to, $subject, $body, $headers);
+	
+	//to send for visitor
+	$body1 = "Dear ".$ubname.",<br><br><b> <u>Contact details</u>:</b>";
+    $body1 .="<br><b>Name of Person :</b> $ubname"; 
+    $body1 .="<br><b>Email :</b> $uemail"; 
+    $body1 .="<br><b>Inquiry Text :</b> $uquery"; 
+	
+	$headers1  = 'MIME-Version: 1.0' . "\r\n";
+    $headers1 .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $headers1 .= "From: $to";
+	
+	mail($uemail, $subject, $body1, $headers1);
+    $msg = "Thank you for submitting your query!";
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -21,7 +68,7 @@
         <nav id="navbar" class="pt-3 navbar-dark navbar navbar-expand-md sticky-top" data-toggle="sticky-onscroll">
             <div class="container">
                 <!-- Brand -->
-                <a class="navbar-brand my-1 mx-5 logo" href="index.html"><img src="assets/img/logo.png" alt="logo" class="img-fluid" width="">
+                <a class="navbar-brand my-1 mx-5 logo" href="index.php"><img src="assets/img/logo.png" alt="logo" class="img-fluid" width="">
                     <!-- <span>Laxmi enigineering services
                     <hr>committed to quality</span> -->
                 </a>
@@ -481,27 +528,27 @@
             <div class="col-md-1"></div>
             <div class="col-md-5 mt-4 pr-5">
                 <div>
-                    <form>
+                    <form name="form1" method="post" action="index.php?action=submit">
                         <div class="row">
                             <div class="col-sm-6 mb-3">
-                                <input type="text" class="form-control" placeholder="Full Name*">
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Full Name*">
                             </div>
                             <div class="col-sm-6 mb-3">
-                                <input type="email" class="form-control" placeholder="Email ID*">
+                                <input type="text" id="email" name="email" class="form-control" placeholder="Email ID*">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12 mb-3">
-                                <input type="email" class="form-control" placeholder="Company Name (optional)">
+                                <input type="text" class="form-control" name="company" placeholder="Company Name (optional)">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12 mb-3">
-                                <textarea class="form-control" placeholder="Your message/Query/Request Quote*" cols="50" rows="10"></textarea>
+                                <textarea class="form-control" name="message" placeholder="Your message/Query/Request Quote*" cols="50" rows="10"></textarea>
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary float-right">SUBMIT</button>
+                        <input type="submit" onclick="return funval();" value="SUBMIT" class="contact-submit btn btn-primary float-right" />
                     </form>
                 </div>
             </div>
@@ -532,7 +579,7 @@
                 <div class="mt-5 col-md-6 ">
                     <ul>
                         <li>
-                            <a href="index.html">Home</a><span>|</span>
+                            <a href="index.php">Home</a><span>|</span>
                         </li>
                         <li>
                             <a href="#aboutUs">About us</a><span>|</span>
@@ -613,6 +660,7 @@
                         location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
                         location.hostname == this.hostname
                     ) {
+                        document.getElementById("navbar").classList.add("sticky")
                         // Figure out element to scroll to
                         var target = $(this.hash);
                         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -639,6 +687,67 @@
                     }
                 });
         });
+
+    function echeck(str) {
+		var at="@";
+		var dot=".";
+		var lat=str.indexOf(at);
+		var lstr=str.length;
+		var ldot=str.indexOf(dot);
+		if (str.indexOf(at)==-1){
+			alert("Invalid E-mail ID");
+			return false;
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+			alert("Invalid E-mail ID");
+			return false;
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+			alert("Invalid E-mail ID");
+			return false;
+		}
+
+		if (str.indexOf(at,(lat+1))!=-1){
+			alert("Invalid E-mail ID");
+			return false;
+		}
+
+		if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+			alert("Invalid E-mail ID");
+			return false;
+		}
+
+		if (str.indexOf(dot,(lat+2))==-1){
+			alert("Invalid E-mail ID");
+			return false;
+		}
+
+		if (str.indexOf(" ")!=-1){
+			alert("Invalid E-mail ID");
+			return false;
+		}
+
+		return true;					
+	}
+		
+	function funval() {
+		if(document.getElementById("name").value=="") {
+			alert("Please Enter  Name!");
+			document.getElementById("name").focus();
+			return false;
+		}
+		
+		if (echeck(document.getElementById("email").value)=="") {
+			alert("Please Enter Your Email !");
+			document.form1.email.focus();
+			return false;
+		}
+		
+		else
+		alert("Thank you for reaching out to Laxmi Engineering Services. You should hear from us within the next 24 hours. Call us at (91) 9545354068 if it is an emergency");
+	}
     </script>
 </body>
 
